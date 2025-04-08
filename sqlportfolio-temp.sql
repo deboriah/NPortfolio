@@ -85,7 +85,7 @@ SELECT
     location, 
     MAX(cast(total_deaths as int)) AS totalDeathsCount
 FROM CovidDeaths
-WHERE continent IS NOT NULL  -- 👈 move this up here!
+WHERE continent IS NOT NULL  
 GROUP BY location
 ORDER BY totalDeathsCount DESC;
 
